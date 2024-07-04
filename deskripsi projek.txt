@@ -1,0 +1,69 @@
+kamu pun ditawarkan kesempatan untuk menjalani program magang di departemen analitik perusahaan Y.Afisha. Nah, tugas pertama yang mereka berikan kepadamu adalah membantu mengoptimalkan anggaran biaya pemasaran. 
+
+Kamu dibekali dengan:
+
+Log/catatan server yang memuat data kunjungan ke situs Y.Afisha dari bulan Januari 2017 hingga bulan Desember 2018
+File dump yang memuat semua pesanan untuk periode tersebut
+Statistik biaya pemasaran
+Kamu akan mempelajari: 
+
+Bagaimana para pengguna menggunakan produk Y.Afisha
+Kapan mereka mulai melakukan pembelian
+Berapa jumlah uang yang disumbangkan oleh setiap pengguna
+Kapan semua biaya pemasaran terbayarkan
+Instruksi untuk menyelesaikan proyek
+
+Langkah 1. Unduh dan siapkan data untuk analisis
+
+Simpan data kunjungan, pesanan, dan pengeluaran ke dalam variabel. Optimalkan data yang kamu miliki untuk keperluan analisis. Pastikan bahwa semua kolom disajikan dengan tipe data yang benar. 
+
+File path:
+
+/datasets/visits_log_us.csv. Unduh dataset
+/datasets/orders_log_us.csv. Unduh dataset
+/datasets/costs_us.csv. Unduh dataset
+Langkah 2. Susun laporan dan hitung metrik-metrik yang diperlukan:
+
+Produk
+Berapa jumlah orang yang menggunakan produk setiap hari, minggu, dan bulan?
+Berapa jumlah sesi per harinya? (Satu pengguna mungkin saja memiliki lebih dari satu sesi).
+Berapa lama durasi untuk setiap sesi?
+Seberapa sering pengguna kembali untuk menggunakan produk?
+Penjualan
+Kapan orang-orang mulai melakukan pembelian? (Dalam analisis KPI, kita biasanya tertarik untuk mengetahui waktu yang berlalu sejak dilakukannya pendaftaran hingga terjadinya konversi (atau ketika pengguna resmi beralih menjadi pelanggan). Sebagai contoh, jika pendaftaran dan pembelian pertama terjadi pada hari yang sama, pengguna bisa dimasukkan ke dalam kategori Konversi h0. Jika pembelian pertama terjadi pada hari berikutnya, kategorinya pun akan menjadi Konversi h1. Kamu boleh menggunakan pendekatan apa pun yang memungkinkanmu untuk membandingkan konversi dari kohort yang berbeda, sehingga kamu bisa menentukan kohort atau saluran pemasaran mana yang paling efektif.).
+Berapa jumlah pesanan yang mereka buat selama periode waktu tertentu?
+Berapa besaran rata-rata pembeliannya?
+Berapa jumlah uang yang mereka kontribusikan? (LTV)
+Pemasaran
+Berapa jumlah uang yang dihabiskan? Keseluruhan/per sumber/dari waktu ke waktu
+Berapa biaya akuisisi pelanggan dari masing-masing sumber?
+Seberapa menguntungkannya investasi tersebut? (ROI)
+Buat grafik yang menampilkan perbedaan metrik-metrik ini untuk berbagai perangkat dan sumber iklan, serta perubahannya dari waktu ke waktu. 
+
+Langkah 3. Tuliskan kesimpulanmu: sampaikan kepada para spesialis marketing berapa banyak uang yang harus diinvestasikan dan ke mana saja uang tersebut harus diinvestasikan.
+
+Sumber/platform apa yang akan kamu rekomendasikan? Berikan alasan yang mendukung pilihanmu: metrik apa saja yang menjadi fokusmu? Mengapa? Kesimpulan apa yang kamu buat setelah menemukan nilai dari metrik-metrik tersebut?
+
+Format: Selesaikan tugas ini di Jupyter Notebook. Masukkan kodemu di sel code dan teks penjelasannya di sel markdown. Terapkan pemformatan dan heading.
+
+---
+Deskripsi data
+Tabel visits (log/catatan server yang memuat data kunjungan ke situs web):
+
+Uid — ID pengguna
+Device — perangkat pengguna
+Start Ts — tanggal dan waktu dimulainya sesi
+End Ts — tanggal dan waktu berakhirnya sesi
+Source Id — ID sumber iklan, sumber yang digunakan pengguna untuk datang ke situs web
+Semua tanggal dalam tabel ini menggunakan format YYYY-MM-DD.
+
+Tabel orders (data terkait pesanan):
+
+Uid — ID pengguna yang membuat pesanan
+Buy Ts — tanggal dan waktu pesanan dibuat
+Revenue — pendapatan Y.Afisha dari pesanan tersebut
+Tabel costs (data terkait pengeluaran pemasaran):
+
+source_id — ID sumber iklan
+dt — tanggal
+costs — pengeluaran untuk sumber iklan pada tanggal tersebut
